@@ -1,9 +1,9 @@
+# -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.contrib.auth.models import User
 from django.db import models
 
 class Profile(models.Model):
-    admin = models.ForeignKey(User, limit_choices_to={'is_staff': True})
     user = models.OneToOneField(User, related_name='profile')
     ar_first_name = models.CharField(max_length=30,
                                      verbose_name=u'الاسم الأول')
@@ -13,14 +13,14 @@ class Profile(models.Model):
                                     verbose_name=u'الاسم الأخير')
     mobile_number = models.CharField(max_length=20,
                                      verbose_name=u'رقم الجوال')
-    picture = models.ImageField(upload_to=None)
+    picture = models.ImageField(upload_to=None,blank=True, null=True)
 
     def __unicode__(self):
         return self.ar_first_name
 
 
 class Article(models.Model):
-    translator = models.ForeignKey(User, related_name='profile',blank=True)
+    translator = models.ForeignKey(User, related_name='translator_name',blank=True)
     en_name = models.CharField(max_length=100)
     ar_name = models.CharField(max_length=100, blank=True)
     addition_date = models.DateTimeField(auto_now_add=True)
@@ -30,7 +30,6 @@ class Article(models.Model):
     is_it_accredit = models.NullBooleanField()
     is_it_translated = models.NullBooleanField()
     when_translated = models.DateTimeField( null=True, blank=True)
-    status = models.CharField(max_length=1, choices=STATUS_CHOICES)
 
     def __unicode__(self):
         return self.en_name
