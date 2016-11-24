@@ -3,7 +3,7 @@
 {% block container %}
   <h3 class="title">All Articles</h3>
   <div class="collection">
-    {% for article in article_list %}
+    {% for article in object_list %}
         <a class="collection-item" href="{% url 'article-detail' article.id %}">{{article.title}}</a>
     {% endfor %}
   </div>
