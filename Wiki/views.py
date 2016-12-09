@@ -1,15 +1,54 @@
+# -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse
 from django.core.urlresolvers import reverse_lazy
-from django.views.generic import ListView, DetailView, CreateView, DeleteView, \
-UpdateView, RedirectView
+from django.views.generic import ListView, DetailView, CreateView, DeleteView, UpdateView, RedirectView
+from django.views.generic.base import TemplateView
 from .models import Article
 from .forms import ArticleForm
+from django.shortcuts import render, get_object_or_404
+from django.contrib.auth.models import User
+from django.core.exceptions import PermissionDenied
 # Create your views here.
+
+
+
+class HomePageView(TemplateView):
+    template_name = "Wiki/home.html"
+
+    def get_context_data(self, **kwargs):
+        context = super(HomePageView, self).get_context_data(**kwargs)
+        return context
+
+#class ProjectPageView(DetailView):
+#    template_name = "Wiki/project_page.html"
+
+#    def get_object(self,request):
+#        return get_object_or_404(User, pk=request.user['user_id'])
+
+def ProjectPageView (request):
+    return render(request,"Wiki/project_page.html")
+
+class translating_page_view(ListView):
+    queryset = Article.objects.all()
+    model = Article
+    template_name ="Wiki/translating_page.html"
+
+
+
+class Article_id(DetailView):
+    pass
+
 
 class HomeListView(ListView):
     template_name = "Wiki/articles_home.html"
     model = Article
+
+    def superuser_only(function):
+        def _inner(request, *args, **kwargs):
+            if not request.user.is_superuser:
+                raise PermissionDenied
+            return function(request, *args, **kwargs)
 
 
 class HomeRedirectView(RedirectView):
@@ -32,8 +71,16 @@ class ArticleCreateView(CreateView):
 
 
 class ArticleDeleteView(DeleteView):
+    success_url = reverse_lazy('wiki/article.html')
     model = Article
-    success_url = reverse_lazy('blog-home')
+    def delete(self, request, *args, **kwargs):
+        self.object = self.get_object()
+        success_url = self.get_success_url()
+        self.object.delete()
+        return HttpResponseRedirect(success_url)
+
+    #success_url = reverse_lazy('article-delete'‌)
+    #success_url = reverse_lazy('wiki/article.html')
 
 
 class ArticleUpdateView(UpdateView):
