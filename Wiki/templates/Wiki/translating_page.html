@@ -1,10 +1,17 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+
+{% extends 'Wiki/articles_base.html' %}
+
+
+{% block container %}
+  <h3 class="title">All Articles</h3>
+  <div class="collection">
+    {% for article in object_list %}
+        <a class="collection-item" href="{% url 'article-detail' article.id %}">{{article.en_name}}</a>
+    {% endfor %}
+  </div>
+     {% if user.is_superuser %}
+     <a class="btn right" href="{% url 'article-create' %}">Create Article</a>
+     {% endif %}
+{% endblock %}
+
