@@ -1,10 +1,32 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>$Title$</title>
+    <title>test</title>
+
+  <!-- Compiled and minified CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
+
+  <!-- Compiled and minified JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/js/materialize.min.js"></script>
+
 </head>
 <body>
-$END$
+
+
+  <nav>
+    <div class="nav-wrapper">
+      <a href="#" class="brand-logo">
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/58/Wiki_Project_Med_Foundation_logo.svg/280px-Wiki_Project_Med_Foundation_logo.svg.png"
+     width="60" height="60"></a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="{% url 'translating-page' %}">Translation</a></li>
+        <li><a href="login.html">sign in</a></li>
+        <li><a href="{% url 'project-page' %}">project page</a></li>
+      </ul>
+    </div>
+  </nav>
+
 </body>
 </html>
