@@ -1,10 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+
+
+{% extends 'Wiki/articles_base.html' %}
+
+
+{% block container %}
+  <h3 class="title"> Article</h3>
+  <div class="collection">
+    {% for article.id  %}
+        <a class="collection-item" href="{% url 'article-page' article.id %}">{{article.en_name}}</a>
+    {% endfor %}
+  </div>
+{% endblock %}
+
