@@ -37,7 +37,7 @@ class translating_page_view(ListView):
 
 
 class Article_page(DetailView):
-    template_name = "wiki/Article_page.html"
+    template_name = "Wiki/Article_page.html"
     model = Article
     #en_name
     #en_link
