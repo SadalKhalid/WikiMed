@@ -36,19 +36,25 @@ class translating_page_view(ListView):
 
 
 
-class Article_id(DetailView):
-    pass
+class Article_page(DetailView):
+    template_name = "wiki/Article_page.html"
+    model = Article
+    #en_name
+    #en_link
+    #when_translated
+
 
 
 class HomeListView(ListView):
     template_name = "Wiki/articles_home.html"
     model = Article
 
-    def superuser_only(function):
-        def _inner(request, *args, **kwargs):
-            if not request.user.is_superuser:
-                raise PermissionDenied
-            return function(request, *args, **kwargs)
+
+   # def superuser_only(function):
+     #   def _inner(request, *args, **kwargs):
+      #      if not request.user.is_superuser:
+     #           raise PermissionDenied
+        #    return function(request, *args, **kwargs)
 
 
 class HomeRedirectView(RedirectView):
@@ -58,11 +64,16 @@ class HomeRedirectView(RedirectView):
 class ArticleDetailView(DetailView):
     template_name = "Wiki/article.html"
     model = Article
+    User == Article.translator
+    if not User.is_superuser:
+        raise PermissionDenied
 
 
 class ArticleCreateView(CreateView):
     template_name = "Wiki/article_create.html"
     form_class = ArticleForm
+    if not User.is_superuser:
+        raise PermissionDenied
 
     def form_valid(self, form):
 
@@ -71,13 +82,15 @@ class ArticleCreateView(CreateView):
 
 
 class ArticleDeleteView(DeleteView):
-    success_url = reverse_lazy('wiki/article.html')
+    success_url = reverse_lazy('translating-page')
     model = Article
-    def delete(self, request, *args, **kwargs):
-        self.object = self.get_object()
-        success_url = self.get_success_url()
-        self.object.delete()
-        return HttpResponseRedirect(success_url)
+   # if not User.is_superuser:
+    #    raise PermissionDenied
+  #  def delete(self, request, *args, **kwargs):
+    #    self.object = self.get_object()
+    #    success_url = self.get_success_url()
+    #    self.object.delete()
+    #    return HttpResponseRedirect(success_url)
 
     #success_url = reverse_lazy('article-delete'‌)
     #success_url = reverse_lazy('wiki/article.html')
@@ -87,3 +100,5 @@ class ArticleUpdateView(UpdateView):
     template_name = "Wiki/article_update.html"
     model = Article
     form_class = ArticleForm
+    if not User.is_superuser:
+        raise PermissionDenied
