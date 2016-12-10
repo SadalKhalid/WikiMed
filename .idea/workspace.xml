@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="dac57f7a-712d-40d0-bbca-30d12329513e" name="Default" comment="" />
+    <list default="true" id="dac57f7a-712d-40d0-bbca-30d12329513e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Wiki/views.py" afterPath="$PROJECT_DIR$/Wiki/views.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/WikiMed/settings.py" afterPath="$PROJECT_DIR$/WikiMed/settings.py" />
+    </list>
     <ignored path="WikiMed.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,11 +36,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Wiki/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="287">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state relative-caret-position="401">
+              <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding>
                 <element signature="e#24#59#0" expanded="true" />
               </folding>
@@ -74,11 +78,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Article_page.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Article_page.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/Article_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+            <state relative-caret-position="120">
+              <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="settings.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/WikiMed/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="122">
+              <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -87,22 +101,9 @@
       <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wiki/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="29" column="8" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="11" />
+            <state relative-caret-position="300">
+              <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Wiki/forms.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
-              <folding>
-                <marker date="1481356424531" expanded="true" signature="95:188" ph="..." />
-                <marker date="1481356424531" expanded="true" signature="112:188" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -120,8 +121,8 @@
       <file leaf-file-name="article.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/article.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+            <state relative-caret-position="285">
+              <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
               <folding />
             </state>
           </provider>
@@ -147,7 +148,6 @@
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/Wiki/Article/List.html" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/Wiki/Article/Wiki/Wiki/article_list.html" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/article_list.html" />
-        <option value="$PROJECT_DIR$/WikiMed/settings.py" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/article_create.html" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/articles_home.html" />
         <option value="$PROJECT_DIR$/Wiki/admin.py" />
@@ -159,12 +159,13 @@
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/project_page.html" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/translating_page.html" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/article_update.html" />
-        <option value="$PROJECT_DIR$/Wiki/views.py" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/article.html" />
         <option value="$PROJECT_DIR$/Wiki/urls.py" />
         <option value="$PROJECT_DIR$/Wiki/models.py" />
         <option value="$PROJECT_DIR$/Wiki/forms.py" />
         <option value="$PROJECT_DIR$/Wiki/templates/Wiki/Article_page.html" />
+        <option value="$PROJECT_DIR$/Wiki/views.py" />
+        <option value="$PROJECT_DIR$/WikiMed/settings.py" />
       </list>
     </option>
   </component>
@@ -669,13 +670,6 @@
     <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/Wiki/Article/List.html" />
     <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/Wiki/Article/Wiki/Wiki/article_list.html" />
     <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/article_list.html" />
-    <entry file="file://$PROJECT_DIR$/WikiMed/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="186">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Wiki/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -743,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wiki/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="4" selection-end-line="29" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Wiki/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -767,16 +753,6 @@
         <state relative-caret-position="180">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Wiki/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
-          <folding>
-            <element signature="e#24#59#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -798,14 +774,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/article.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="14" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/article_create.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -822,11 +790,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="19" column="26" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wiki/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="22" column="10" selection-start-line="22" selection-start-column="10" selection-end-line="22" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Wiki/templates/Wiki/Article_page.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
+        <state relative-caret-position="120">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/WikiMed/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="33" column="3" selection-start-line="33" selection-start-column="3" selection-end-line="33" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Wiki/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="401">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding>
+            <element signature="e#24#59#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
