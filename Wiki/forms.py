@@ -7,4 +7,4 @@ class ArticleForm(ModelForm):
 
     class Meta:
         model = Article
-        exclude = ['translator']
+        fields = ['translator','en_name','en_link']
