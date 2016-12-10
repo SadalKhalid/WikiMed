@@ -21,15 +21,22 @@ class Profile(models.Model):
 
 class Article(models.Model):
     translator = models.ForeignKey(User, related_name='translator_name',blank=True)
-    en_name = models.CharField(max_length=100)
-    ar_name = models.CharField(max_length=100, blank=True)
-    addition_date = models.DateTimeField(auto_now_add=True)
-    en_link = models.URLField(max_length=200)
-    ar_link = models.URLField(max_length=200, blank=True)
-    when_accredit = models.DateTimeField(null=True, blank=True)
-    is_it_accredit = models.NullBooleanField()
-    is_it_translated = models.NullBooleanField()
-    when_translated = models.DateTimeField( null=True, blank=True)
+    en_name = models.CharField(max_length=100,
+                               verbose_name=u'عنوان المقالة باللغة الانجليزية')
+    ar_name = models.CharField(max_length=100, blank=True,
+                               verbose_name=u'عنوان المقالة باللغة العربية')
+    addition_date = models.DateTimeField(auto_now_add=True,
+                                         verbose_name=u'تاريخ الإضافة')
+    en_link = models.URLField(max_length=200,
+                              verbose_name=u'رابط المقالة باللغة الانجليزية')
+    ar_link = models.URLField(max_length=200, blank=True,
+                              verbose_name=u'رابط المقالة باللغة العربية')
+    when_accredit = models.DateTimeField(null=True, blank=True,
+                                         verbose_name=u'متى اعتمدت؟ ')
+    is_it_accredit = models.NullBooleanField(verbose_name=u'هل هي معتمدة؟ ')
+    is_it_translated = models.NullBooleanField(verbose_name=u'هل تُرجمت؟')
+    when_translated = models.DateTimeField( null=True, blank=True,
+                                            verbose_name=u'متى تُرجمت؟')
 
     def __unicode__(self):
         return self.en_name
