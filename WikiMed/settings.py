@@ -31,9 +31,9 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    "userena",
-    "guardian",
-    "easy_thumbnails",
+  #  "userena",
+   # "guardian",
+    #"easy_thumbnails",
     'Wiki',
     'django.contrib.admin',
     'django.contrib.auth',
