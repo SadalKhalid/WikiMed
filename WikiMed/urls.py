@@ -17,9 +17,15 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from Wiki import views, models
 from Wiki import urls as wiki_urls
+from userena import settings as userena_settings
+from Wiki.forms import WikiSignupForm
 
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^Wiki/', include(wiki_urls)),
+  #  url(r'^accounts/signup/$', 'signup',
+      #  {'signup_form': WikiSignupForm, 'template_name': 'Wiki/signup_form.html'}),
+    #url(r'^accounts/', include('userena.urls')),
+
 ]
