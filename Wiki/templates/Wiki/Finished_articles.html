@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{% extends 'Wiki/articles_base.html' %}
+ {% if user.is_superuser %}
+{% block container %}
+  <h3 class="title">Finished Articles</h3>
+  <div class="collection">
+    {% if translator == Article %}
+        <a class="collection-item" href="{% url 'finished-article' article.id %}">{{article.en_name}}</a>
+    {% endif %}
+  </div>
+{% endblock %}
+{% endif %}
