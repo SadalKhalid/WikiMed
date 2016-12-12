@@ -2,6 +2,11 @@
 from __future__ import unicode_literals
 from django.contrib.auth.models import User
 from django.db import models
+from django.contrib.auth import get_user_model
+from userena import settings as userena_settings
+from django.utils.translation import gettext as _
+
+
 
 class Profile(models.Model):
     user = models.OneToOneField(User, related_name='profile')
@@ -17,6 +22,8 @@ class Profile(models.Model):
 
     def __unicode__(self):
         return self.ar_first_name
+
+
 
 
 class Article(models.Model):
