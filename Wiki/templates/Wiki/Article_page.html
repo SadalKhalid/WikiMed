@@ -4,14 +4,19 @@
 
 
 {% block container %}
-  <h3 class="title"> Article</h3>
   <div class="collection">
 
         <a class="collection-item" href="{% url 'article-page' article.id %}">{{article.en_name}}</a>
       <p>
            Author: {{ article.translator }}<br/>
            link: {{ article.en_link }}<br/>
-       <a class="btn btn-primary" href="{% url 'article-page' article.id %}">Finish article</a>
+
+
+<form action="demo_form.asp">
+  رابط المقالة المنجزة: <input type="url" name="usrname" required <br>
+</form>
+
+       <a class="btn btn-primary" href="{% url 'finished-article' article.id %}">أنهيت مقالة</a>
 
 </p>
 <p>
