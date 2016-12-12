@@ -10,15 +10,20 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.models import User
 from django.core.exceptions import PermissionDenied
 # Create your views here.
-
+from userena.forms import (SignupForm)
+from userena.models import UserenaSignup
+from userena.decorators import secure_required
+from userena.utils import signin_redirect, get_profile_model, get_user_profile
+from userena import signals as userena_signals
+from userena import settings as userena_settings
 
 
 class HomePageView(TemplateView):
     template_name = "Wiki/home.html"
 
-    def get_context_data(self, **kwargs):
-        context = super(HomePageView, self).get_context_data(**kwargs)
-        return context
+   # def get_context_data(self, **kwargs):
+      #  context = super(HomePageView, self).get_context_data(**kwargs)
+       # return context
 
 #class ProjectPageView(DetailView):
 #    template_name = "Wiki/project_page.html"
@@ -39,10 +44,12 @@ class translating_page_view(ListView):
 class Article_page(DetailView):
     template_name = "Wiki/Article_page.html"
     model = Article
-    #en_name
-    #en_link
-    #when_translated
 
+
+class Mark_Article_As_Finish(ListView):
+    model =Article
+    template_name ="Wiki/Finished_articles.html"
+    translator= {User.id}
 
 
 class HomeListView(ListView):
@@ -84,8 +91,8 @@ class ArticleCreateView(CreateView):
 class ArticleDeleteView(DeleteView):
     success_url = reverse_lazy('translating-page')
     model = Article
-   # if not User.is_superuser:
-    #    raise PermissionDenied
+    if not User.is_superuser:
+        raise PermissionDenied
   #  def delete(self, request, *args, **kwargs):
     #    self.object = self.get_object()
     #    success_url = self.get_success_url()
@@ -102,3 +109,4 @@ class ArticleUpdateView(UpdateView):
     form_class = ArticleForm
     if not User.is_superuser:
         raise PermissionDenied
+
