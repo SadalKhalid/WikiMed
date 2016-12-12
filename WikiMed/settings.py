@@ -27,14 +27,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+EMAIL_BACKEND ='django.core.mail.backends.dummy.EmailBackend'
+
 
 # Application definition
 
 INSTALLED_APPS = (
-  #  "userena",
-   # "guardian",
-    #"easy_thumbnails",
+    "userena",
+    "guardian",
+    "easy_thumbnails",
     'Wiki',
+    "accounts",
+    'django.contrib.sites',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -49,7 +53,17 @@ AUTHENTICATION_BACKENDS = (
     'django.contrib.auth.backends.ModelBackend',
 )
 
+SITE_ID = 1
+
 ANONYMOUS_USER_ID = -1
+
+AUTH_PROFILE_MODULE = 'accounts.MyProfile'
+
+LOGIN_REDIRECT_URL = '/accounts/%(username)s/'
+LOGIN_URL = '/accounts/signin/'
+LOGOUT_URL = '/accounts/signout/'
+
+
 
 MIDDLEWARE_CLASSES = (
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -87,12 +101,17 @@ WSGI_APPLICATION = 'WikiMed.wsgi.application'
 # https://docs.djangoproject.com/en/1.8/ref/settings/#databases
 
 DATABASES = {
-    'default': {
+   'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+       'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
     }
 }
 
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_HOST_USER = 'sadal.aldakhil@gmail.com'
+EMAIL_HOST_PASSWORD = '14-12-2008'
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
