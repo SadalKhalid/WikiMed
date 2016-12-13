@@ -27,7 +27,7 @@ class Profile(models.Model):
 
 
 class Article(models.Model):
-    translator = models.ForeignKey(User, related_name='translator_name',blank=True)
+    translator = models.ForeignKey(User, related_name='translator_name',null=True, blank=True)
     en_name = models.CharField(max_length=100,
                                verbose_name=u'عنوان المقالة باللغة الانجليزية')
     ar_name = models.CharField(max_length=100, blank=True,

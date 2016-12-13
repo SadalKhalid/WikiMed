@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     "accounts",
     'django.contrib.sites',
     'django.contrib.admin',
+  #  'django.contrib.foo',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -130,4 +131,21 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
+
+#if DEBUG:
+#    MEDIA_URL = '/media/'
+#    STATIC_ROOT = os.path.join(os.path.dirname(BASE_DIR), "static")
+#    MEDIA_ROOT = os.path.join(os.path.dirname(BASE_DIR), "media")
+#    STATICFILES_DIRS = (
+#                          os.path.join(os.path.dirname(BASE_DIR), "static", "static")
+#                      ),
+
+
+
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+        os.path.join(BASE_DIR, "static"),
+        '/var/www/static/',
+    ]
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_URL = '/media/'

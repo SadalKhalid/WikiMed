@@ -4,7 +4,7 @@
 
 
 {% block container %}
-  <h3 class="title">All Articles</h3>
+  <h3 class="title"> المقالات</h3>
   <div class="collection">
     {% for article in object_list %}
         <a class="collection-item" href="{% url 'article-detail' article.id %}">{{article.en_name}}</a>

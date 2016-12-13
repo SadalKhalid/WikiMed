@@ -20,6 +20,7 @@ from userena import settings as userena_settings
 
 class HomePageView(TemplateView):
     template_name = "Wiki/home.html"
+ #   template_name = "Wiki/index.html"
 
    # def get_context_data(self, **kwargs):
       #  context = super(HomePageView, self).get_context_data(**kwargs)

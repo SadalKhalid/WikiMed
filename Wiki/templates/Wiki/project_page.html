@@ -1,12 +1,36 @@
+{% extends 'Wiki/articles_base.html' %}
+
+
+
+{% block container %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Wiki Med project</title>
+    <style>
+
+    h1.italic {
+    font-style: italic;
+}
+p {
+    font-family: "Times New Roman",
+}
+
+    p.italic {
+    font-style: italic;
+}
+</style>
 </head>
 <body>
 
-<a class="collection-item" href="{% url 'project-page' %}">Wiki Med project</a>
 <h1>مشروع ويكي طب </h1>
+<p>
+
+ويكيبيديا هي مشروع موسوعة رقمية، متعددة اللغات، حرة المحتوى. يستطيع أي شخص التحرير فيها بدون تسجيل، ويستطيع أي شخص الاستفادة من المحتوى، واستغلاله بهدف تجاري أو غيره وفقًا لترخيص الموسوعة. هناك 295 نسخة من ويكيبيديا بلغة مختلفة. وفي النسخة العربية، يساهم أكثر من 4,193 مساهما نشطا في كتابة ما يزيد عن 453,365 مقالة، ويجري آلاف الزوار، من مختلف أنحاء العالم، الكثير من التعديلات، وينشئون الكثير من المقالات الجديدة يوميًا.
+
+
+</p>
 </body>
 </html>
+{% endblock %}
