@@ -4,10 +4,10 @@
 
 
 {% block container %}
-  <h3 class="title"> المقالات</h3>
+  <h1 class="title"> المقالات</h1>
   <div class="collection">
     {% for article in object_list %}
-        <a class="collection-item" href="{% url 'article-detail' article.id %}">{{article.en_name}}</a>
+        <a class="collection-item" href="{% url 'article-detail' article.id %}" dir="ltr">{{article.en_name}}</a>
     {% endfor %}
   </div>
      {% if user.is_superuser %}
