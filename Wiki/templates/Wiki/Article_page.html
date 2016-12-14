@@ -6,17 +6,24 @@
 {% block container %}
   <div class="collection">
 
-        <a class="collection-item" href="{% url 'article-page' article.id %}">{{article.en_name}}</a>
-      <p>
-           Author: {{ article.translator }}<br/>
-           link: {{ article.en_link }}<br/>
-
-  رابط المقالة المنجزة:
+        <a class="collection-item" href="{% url 'article-page' article.id %}" dir="ltr">{{article.en_name}}</a>
+         {% if aritcle.translator %}
+            <p> المترجم :</p> {{ article.translator }}
+        {% else %}
+       <p>
+           المترجم :
+                 <br/>
+           لا يوجود مترجم</p>
+        {% endif %}
+   <p> الرابط :</p>   <a href="{{ article.en_link }}" > {{ article.en_link }}</a>
+      <br/>
+<p>  رابط المقالة المنجزة:
+</p>
 <form action="demo_form.asp">
  <input type="url" name="usrname" required <br>
 </form>
 
-       <a class="btn btn-primary" href="{% url 'finished-article' article.id %}">أنهيت مقالة</a>
+     <p>  <a class="btn btn-primary" href="{% url 'finished-article' article.id %}">أنهيت المقالة</a>
 
 </p>
 <p>
